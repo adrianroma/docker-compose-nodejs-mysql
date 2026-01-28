@@ -1,5 +1,5 @@
 module.exports = {
-  HOST: "mysqldb",
+  HOST: "mysqldb",//"mysqldb",
   USER: "root",
   PASSWORD: "123456",
   DB: "access",
