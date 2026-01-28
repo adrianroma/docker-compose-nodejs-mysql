@@ -1,0 +1,26 @@
+const express = require("express");
+const router = express.Router();
+const data = require("../controllers/data");
+const jwt = require("../controllers/jwt");
+const user = require("../controllers/user");
+const service = require("../controllers/service");
+const modules = require("../controllers/modules");
+
+router.post("/log",express.raw({type: "application/json"}), data.saveLog);
+router.post("/text",express.raw({type: "application/json"}), data.toText);
+router.post("/health",express.raw({type: "application/json"}), data.healthCheck);
+router.post("/generate_token",express.raw({type: "application/json"}), jwt.generateToken);
+router.post("/refresh_token",express.raw({type: "application/json"}), jwt.refreshToken);
+router.post("/user/generateTable",express.raw({type: "application/json"}), user.generateTable);
+router.post("/user/createUser",express.raw({type: "application/json"}), user.createUser);
+router.post("/user/deleteUser",express.raw({type: "application/json"}), user.deleteUser);
+router.post("/user/checkPassword",express.raw({type: "application/json"}), user.checkPassword);
+router.post("/service/generateTable",express.raw({type: "application/json"}), service.generateTable);
+router.post("/service/createService",express.raw({type: "application/json"}), service.createService);
+router.post("/service/deleteService",express.raw({type: "application/json"}), service.deleteService);
+router.post("/service/searchService",express.raw({type: "application/json"}), service.searchService);
+router.post("/module/generateTable",express.raw({type: "application/json"}), modules.generateTable);
+router.post("/module/createModule",express.raw({type: "application/json"}), modules.createModule);
+router.post("/module/deleteModule",express.raw({type: "application/json"}), modules.deleteModule);
+router.post("/module/searchModule",express.raw({type: "application/json"}), modules.searchModule);  
+module.exports = router;

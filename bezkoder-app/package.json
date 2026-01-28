@@ -17,10 +17,19 @@
   "author": "bezkoder",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.13.3",
+    "cluster": "^0.7.7",
+    "cors": "^2.8.6",
     "dotenv": "^10.0.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mysql2": "^2.0.2",
-    "sequelize": "^5.21.2"
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.16.2",
+    "path": "^0.12.7",
+    "promise": "^8.3.0",
+    "promises": "^0.2.5",
+    "sequelize": "^6.37.7"
   }
 }
